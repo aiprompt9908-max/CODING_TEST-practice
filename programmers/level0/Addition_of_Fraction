@@ -1,0 +1,17 @@
+import math
+def solution (numer1,denom1,numer2,denom2):
+    #1 분자 더하기
+    new_numer = numer1 * denom2 + numer2 * denom1
+    #2 분모 통분하기
+    new_denom = denom1 * denom2
+    #3 최대공약수 구하기
+    gcd_value = math.gcd (new_numer, new_denom)
+    #4 기약분수 만들기
+    answer = new_numer // gcd_value, new_denom // gcd_value
+    return answer
+# Numerator : 분자
+# Denominator : 분모
+# Common Denominator : 공통분모
+# Irreducible Fraction : 기약분수
+# Greatest Common Divisor : 최대공약수
+# Least Common Multiple : 최소공배수
